@@ -9,7 +9,7 @@ const COLORS = ["#5B8DEF", "#A7C3F2"];
 
 const PaidUnpaid = ({ data }) => {
   return (
-    <div className="bg-transparent rounded-2xl  p-6 border mt-6 h-70 w-100 border-gray-400">
+    <div className="bg-transparent rounded-2xl  p-6 border mt-6 h-70 w-full border-gray-400">
       <h2 className="text-2xl font-semibold mb-4">
         Paid vs Unpaid
       </h2>
