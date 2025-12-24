@@ -8,18 +8,18 @@ import { RiSettingsLine } from "react-icons/ri";
 
 const Sidebar = () => {
   const linkPage = ({ isActive }) =>
-    `flex items-center text-2xl px-3 py-4 pl-10 gap-3 transition ${
+    `flex items-center text-2xl px-3 py-4 pl-10 gap-5 transition ${
       isActive ? "bg-[#33455D] text-white" : "text-gray-300 hover:bg-[#2b3f5f]"
     }`;
 
   return (
-    <div className="w-75 h-screen bg-[#1F2F48]">
+    <div className="w-70 h-100% bg-[#1F2F48]">
       {/* Logo  */}
-      <div className="flex items-center gap-4 m-8 p-6">
-        <span className="h-10 w-10 bg-blue-400 rounded-full inline-flex ">
+      <div className="flex items-center gap-4 m-6 p-6">
+        <span className="h-11 w-11 bg-blue-400 rounded-full inline-flex ">
           {" "}
         </span>
-        <h1 className="text-white text-3xl font-bold">Admin</h1>
+        <h1 className="text-white text-[26px] font-bold">Admin</h1>
       </div>
       {/* Menu */}
       <nav>
