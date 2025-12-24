@@ -2,22 +2,22 @@ export const dashboardCard = [
   {
     id: 1,
     title: "Total Students",
-    value: "200",
+    value: "13",
   },
   {
     id: 2,
     title: "Total Collected",
-    value: "$25,000",
+    value: "$8,100",
   },
   {
     id: 3,
     title: "Pending Payments",
-    value: "$5,000",
+    value: "$2,350",
   },
   {
     id: 4,
     title: "Overdue",
-    value: "20",
+    value: "4",
   },
 ];
 
@@ -33,12 +33,12 @@ export const monthlyCollection = [
 
 export const paidUnpaidData = [
   {
-    name: "Paid",
-    value: 8000,
+    name: "Unpaid",
+    value: 2350,
   },
   {
-    name: "Unpaid",
-    value: 12000,
+    name: "Paid",
+    value: 8100,
   },
 ];
 
