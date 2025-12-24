@@ -22,7 +22,7 @@ const Dashboard = () => {
       </div>
       {/* Cards */}
       <h1 className="text-3xl text-[#222] font-medium mb-5">Summary</h1>
-      <div className="flex gap-3">
+      <div className="flex gap-3 justify-between">
         {dashboardCard.map((card) => (
           <Dashboardcard key={card.id} title={card.title} value={card.value} />
         ))}
