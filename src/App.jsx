@@ -1,23 +1,25 @@
-import Dashboard from "./pages/Dashboard";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout";
-import Student from "./pages/Student";
-import Payment from "./pages/Payment";
-import Fees from "./pages/Fees";
-import Report from "./pages/Report";
-import Setting from "./pages/Setting";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Academics from "./pages/Academics";
+import Admissions from "./pages/Admissions";
+import CampusLife from "./pages/CampusLife";
+import News from "./pages/News";
+import Contact from "./pages/Contact";
 
 const App = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route element={<Layout />}>
-          <Route path="/" element={<Dashboard />} />
-          <Route path="/students" element={<Student />} />
-          <Route path="/payments" element={<Payment />} />
-          <Route path="/fees" element={<Fees />} />
-          <Route path="/reports" element={<Report />} />
-          <Route path="/settings" element={<Setting />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/academics" element={<Academics />} />
+          <Route path="/admissions" element={<Admissions />} />
+          <Route path="/campus-life" element={<CampusLife />} />
+          <Route path="/news" element={<News />} />
+          <Route path="/contact" element={<Contact />} />
         </Route>
       </Routes>
     </BrowserRouter>
