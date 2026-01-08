@@ -3,23 +3,10 @@
 html,
 body,
 #root {
-  height: 100%;
-  overflow: hidden;
+  min-height: 100%;
 }
 
 body {
   font-family: "Inter", sans-serif;
-}
-/* Hide scrollbar but keep scrolling */
-.no-scrollbar {
-  -ms-overflow-style: none; /* IE & Edge */
-  scrollbar-width: none; /* Firefox */
-}
-
-.no-scrollbar::-webkit-scrollbar {
-  display: none; /* Chrome, Safari */
-}
-.no-scrollbar:hover::-webkit-scrollbar {
-  display: block;
-  width: 6px;
+  background-color: #020617;
 }
