@@ -1,17 +1,37 @@
-import Sidebar from "./Sidebar";
 import { Outlet } from "react-router-dom";
+import { useEffect, useState } from "react";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
+
+const getInitialTheme = () => {
+  const stored = localStorage.getItem("theme");
+  if (stored) {
+    return stored;
+  }
+  return window.matchMedia("(prefers-color-scheme: light)").matches
+    ? "light"
+    : "dark";
+};
 
 const Layout = () => {
+  const [theme, setTheme] = useState(getInitialTheme);
+
+  useEffect(() => {
+    document.body.classList.toggle("theme-light", theme === "light");
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme((prev) => (prev === "light" ? "dark" : "light"));
+  };
+
   return (
-    <div className="px-18 pt-17 pb-0 h-screen bg-[#DFE3E6]">
-      <div className="flex rounded-t-3xl overflow-hidden h-full shadow-2xl">
-        {/* no scroll sidebar  */}
-        <Sidebar />
-        {/* scroll main content  */}
-        <div className="flex-1 overflow-y-auto bg-[#EBEBEB] no-scrollbar">
-          <Outlet />
-        </div>
-      </div>
+    <div className="min-h-screen bg-[color:var(--bg)] text-[color:var(--text)]">
+      <Navbar theme={theme} onToggleTheme={toggleTheme} />
+      <main className="pt-24">
+        <Outlet />
+      </main>
+      <Footer />
     </div>
   );
 };
